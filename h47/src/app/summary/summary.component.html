@@ -1,0 +1,15 @@
+<div class="summary-container">
+  <h3>Summary of Innovations</h3>
+
+<div *ngIf="chartData; else loading">
+  <canvas id="myChart"></canvas>  <!-- Ensure this matches the ID used in TypeScript -->
+</div>
+<ng-template #loading>
+  <p>Loading chart...</p>
+</ng-template>
+
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

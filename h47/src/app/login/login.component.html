@@ -1,0 +1,28 @@
+<!-- src/app/login/login.component.html -->
+<div class="login-container">
+  <h2>Login</h2>
+  <p>Correct credentials: user1, password123</p>
+  <form (ngSubmit)="onLogin()">
+    <label for="username">Username</label>
+    <input 
+      type="text" 
+      id="username" 
+      [(ngModel)]="username" 
+      name="username" 
+      required 
+      placeholder="Enter your username" 
+    />
+
+    <label for="password">Password</label>
+    <input 
+      type="password" 
+      id="password" 
+      [(ngModel)]="password" 
+      name="password" 
+      required 
+      placeholder="Enter your password" 
+    />
+
+    <button type="submit">Login</button>
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<div *ngIf="chartData; else loading">
+  <!-- Your chart rendering logic goes here -->
+</div>
+
+<ng-template #loading>
+  <p>Loading chart data...</p>
+</ng-template>
+
+<!-- Display error message if it exists -->
+<p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
